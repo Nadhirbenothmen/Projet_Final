@@ -1,0 +1,309 @@
+/* Transforming SCSS to CSS */
+/* Style de base pour les liens */
+
+ 
+
+  
+  .containerUL ul {
+	display: inline;
+	list-style: none;
+	margin-bottom: 50px;
+
+  }
+  
+  .containerUL ul li {
+	margin-right: 20px;
+  }
+  
+  .containerUL ul li a {
+	color: #333;
+	font-weight: bold;
+	text-decoration: none;
+	margin-bottom: 50px;
+
+  }
+  
+  .containerUL ul li a:hover {
+	color: #1976d2;
+  }
+  
+  .containerUL ul li a.active {
+	color: #1976d2;
+  }
+  
+  .containerUL .logo {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #333;
+  }
+  
+  .containerUL .logo:hover {
+	color: #1976d2;
+  }
+  
+  .containerUL .menu {
+	display: inline;
+  }
+  
+  .containerUL .menu-icon {
+	font-size: 1.5rem;
+	color: #333;
+	cursor: pointer;
+  }
+  
+  .containerUL .menu-icon:hover {
+	color: #1976d2;
+  }
+  
+  .containerUL .menu-icon.active {
+	color: #1976d2;
+  }
+  
+  .containerUL .menu-icon.active + ul {
+	display: flex;
+  }
+  
+  .containerUL ul {
+	display: inline;
+	position: absolute;
+	top: 60px;
+	left: 0;
+	width: 100%;
+	background-color: #f1f5f9;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .containerUL ul li {
+	width: 100%;
+	text-align: center;
+	padding: 10px 0;
+	border-bottom: 1px solid #e0e0e0;
+	margin-bottom: 50px;
+
+  }
+  
+  .containerUL ul li a {
+	margin-right: 0;
+	margin-bottom: 50px;
+
+  }
+  
+
+  
+/* mat-toolbar styles */
+mat-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #e9e6e6; /* Added background color */
+}
+
+/* ul styles */
+
+
+ul li {
+    list-style: none;
+}
+
+/* button styles */
+button {
+    outline: none;
+    border: 0;
+    background: transparent;
+}
+
+/* .user class styles */
+.user {
+    font-size: 14px;
+}
+
+/* .user-image class styles */
+.user-image {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+/* .user-image-icon styles */
+.user-image-icon {
+    height: 18px;
+    font-size: 16px;
+}
+
+/* Styles within ::ng-deep */
+/* Note: ::ng-deep is deprecated, and its use is discouraged */
+/* These styles affect elements inside Angular components */
+
+.mat-menu-content {
+    width: 10px;
+}
+
+/* ************************* */
+/* Revealing 3D Menu CSS */
+body
+{
+	font-family: sans-serif;
+	font-size: 100%;
+	padding: 0;
+	margin: 0;
+	color: #333;
+	background-color: #222;
+}
+
+/* main page */
+article
+{
+	position: fixed;
+	width: auto;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	padding: 30px 15%;
+	background-color: #fff;
+	overflow: auto;
+	z-index: 0;
+	-webkit-transform-origin: 0 50%;
+	-moz-transform-origin: 0 50%;
+	-ms-transform-origin: 0 50%;
+	-o-transform-origin: 0 50%;
+	transform-origin: 0 50%;
+}
+
+
+article:after
+{
+	position: absolute;
+	content: ' ';
+	left: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+/*	background-image: -webkit-linear-gradient(right, rgba(0,0,0,0.2) 0%, transparent 100%);
+	background-image: -moz-linear-gradient(right, rgba(0,0,0,0.2) 0%, transparent 100%);
+	background-image: -ms-linear-gradient(right, rgba(0,0,0,0.2) 0%, transparent 100%);
+	background-image: -o-linear-gradient(right, rgba(0,0,0,0.2) 0%, transparent 100%);
+	background-image: linear-gradient(right, rgba(0,0,0,0.2) 0%, transparent 100%);
+	pointer-events: none;*/
+}
+
+/* navigation */
+nav
+{
+	position: fixed;
+	left: -16.3em;
+	top: 0;
+	bottom: 0;
+	background-color: #bec4be ;
+	border-right: 50px solid #bec4be ;
+	border-top-right-radius: 25px; /* Adjust the value to control the roundness of the top-right corner */
+	border-bottom-right-radius: 25px;
+	box-shadow: 4px 0 5px rgba(0,0,0,0.2);
+	z-index: 1;
+	cursor: pointer;
+}
+
+  
+
+nav:after
+{
+	position: absolute;
+	content: '';
+	width: 0;
+	height: 0;
+	right: -89px;
+	top: 50%;
+	border-width: 20px 20px;
+	border-style: solid;
+	border-color: transparent transparent transparent #bec4be;
+}
+
+nav ul
+{
+	margin: 0;
+	padding: 2.5em;
+}
+
+nav a:link, nav a:visited { 
+	display: inline; 
+	font-weight: bold; 
+	font-size: 17px;
+	line-height: 4em; 
+	text-indent: 30px; 
+	text-decoration: none; 
+	color: #000000; 
+	border-radius: 4px;
+	 outline: 0 none;
+	  margin-left: -20px;
+	   margin-top: 70px;
+	 }
+
+
+
+nav a:hover, nav a:focus
+{
+	color: #895110;
+	background-color: darken(#1e293b, 20%);
+	text-shadow: 0 0 4px #fff;
+	box-shadow: inset 0 2px 2px rgba(0,0,0,0.2);
+}
+
+/* hovering */
+article, article:after, nav, nav *
+{
+	-webkit-transition: all 600ms ease;
+	-moz-transition: all 600ms ease;
+	-ms-transition: all 600ms ease;
+	-o-transition: all 600ms ease;
+	transition: all 600ms ease;
+}
+
+nav:hover
+{
+	left: 0;
+}
+
+nav:hover ~ article
+{
+	-webkit-transform: translateX(16em) perspective(600px) rotateY(10deg);
+	-moz-transform: translateX(16em) perspective(600px) rotateY(10deg);
+	-ms-transform: translateX(16em) perspective(600px) rotateY(10deg);
+	-o-transform: translateX(16em) perspective(600px) rotateY(10deg);
+	transform: translateX(16em) perspective(600px) rotateY(10deg);
+}
+
+nav:hover ~ article:after
+{
+	left: 60%;
+}
+
+/* typography */
+/* footer
+{
+	margin-top: 2em;
+	border-top: 1px dotted #999;
+} */
+
+/* h1
+{
+	font-size: 2.5em;
+	font-weight: normal;
+	margin: 0 0 0.2em 0;
+} */
+
+p
+{
+	line-height: 1.3em;
+	margin: 0 0 1.5m 0;
+}
+
+/* .lead {
+  font-weight:100;
+  font-size:21px;
+} */
+
+picture {
+  width:100%;
+  height:auto;
+  display:block;
+}

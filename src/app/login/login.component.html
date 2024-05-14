@@ -1,0 +1,61 @@
+<div class="vid-container">
+  <!-- <video autoplay muted loop id="Video1" style="width:2000px;" >
+    <source src="../../assets/PIBackground.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video> -->
+  <img class="image" src="../../assets/bgApp.jpg" alt="img" />
+
+  <div class="inner-container">
+    <form #addform="ngForm" (ngSubmit)="login(addform)" novalidate>
+      <div class="box">
+        <h1>Login</h1>
+
+        <input
+          ngModel
+          name="email"
+          #email="ngModel"
+          type="email"
+          placeholder="Email d'utilisateur"
+          required
+          [class.input-error]="email.invalid && (email.dirty || email.touched)"
+        />
+
+        <div
+          *ngIf="email.invalid && (email.dirty || email.touched)"
+          class="error-message"
+        >
+          <div *ngIf="email.errors?.['required']">
+            * Le Email d'utilisateur est requis.
+          </div>
+          <div *ngIf="email.errors?.['email']">
+            * Veuillez saisir une adresse email valide.
+          </div>
+        </div>
+
+        <input
+          ngModel
+          name="password"
+          #password="ngModel"
+          type="password"
+          placeholder="Mot de passe"
+          required
+          [class.input-error]="
+            password.invalid && (password.dirty || password.touched)
+          "
+        />
+
+        <!-- Display validation error messages -->
+        <div
+          *ngIf="password.invalid && (password.dirty || password.touched)"
+          class="error-message"
+        >
+          <div *ngIf="password.errors?.['required']">
+            * Le mot de passe est requis.
+          </div>
+        </div>
+        <button type="submit">Connexion</button>
+        <!-- <p>Pas encore membre ? <a (click)="openPopup()">S'inscrire</a></p> -->
+      </div>
+    </form>
+  </div>
+</div>

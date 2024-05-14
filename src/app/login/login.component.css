@@ -1,0 +1,131 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter';
+    border: none;
+    outline: auto;
+
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+  }
+  .input-error {
+    border-color: #ff0000; /* Red border for input fields with errors */
+  }
+  
+  /* CSS for error messages */
+  .error-message {
+    color: #ff0000; /* Red color for error messages */
+    font-size: 1.1em; /* Adjust font size as needed */
+    margin-top: 5px; /* Add some space between input field and error message */
+    margin-left: 50px;
+  }
+.vid-container {
+    margin-top:auto ;
+    margin-left:auto ;
+    margin-right: auto;
+    margin-bottom: auto;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+.image{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);
+    z-index: -1;
+
+}
+/* .bgvid.back {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+} */
+.inner-container {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: calc(50vh - 200px);
+    left: calc(50vw - 200px);
+    overflow: hidden;
+    border-radius: 7px;
+}
+.box {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    font-family: 'Inter';
+    color: #fff;
+    background: rgba(0, 0, 0, 0.28);
+    padding: 30px 0px;
+    border-radius: 7px;
+  }
+  
+  .box h1 {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 30px;
+  }
+  
+  .box input {
+    display: block;
+    width: 300px;
+    margin: 20px auto;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    border-radius: 7px;
+    border: 0;
+  }
+  
+  input::placeholder {
+    color: #b6aba3;
+    font-size: 17px;
+  }
+  
+  .signup {
+    color: #b6aba3 !important;
+  }
+  
+  .box input:focus,
+  .box input:active,
+  .box button:focus,
+  .box button:active {
+    outline: none;
+  }
+  
+  .box button {
+    background: #2d2f36;
+    border: 0;
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+    width: 330px;
+    margin: 20px auto;
+    display: block;
+    cursor: pointer;
+    border-radius: 7px;
+  }
+  
+  .box button:active {
+    background: #000000;
+  }
+  
+  .box p {
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .box p span {
+    cursor: pointer;
+    color: #666;
+  }

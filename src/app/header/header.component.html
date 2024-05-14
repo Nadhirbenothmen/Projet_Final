@@ -1,0 +1,244 @@
+<!-- menu -->
+<nav>
+  <div style="position: absolute; right: 0;top:50% ;justify-content: center;">
+    <img src="../../assets/menu (2).png" style="width: 35px;position: absolute;margin-left: 13px;">
+  </div>
+  <div>
+    <img
+      src="../../assets/fotifiz.png"
+      style="width: 200px; margin-left: 30px"
+    />
+  </div>
+<div >
+  <ng-container *ngIf="roleType === 'Coach'">
+  <ul>
+    <li >
+      <a
+        
+        routerLink="/homeCoach"
+        
+        >Statistics of Players <img src="../../assets/bar-chart.png" style="width: 30px;margin-left: 10px;"></a
+      >
+    </li>
+    
+    
+    
+    <li >
+      <a
+        
+        routerLink="/homeCoach/Match"
+        *ngIf="roleType === 'Coach'"
+        >Match <img src="../../assets/football-pitch.png" style="width: 30px;margin-left: 10px;"></a
+      >
+    </li>
+    <!-- <li >
+      <a
+        
+        routerLink="/homeCoach/Formation"
+        *ngIf="roleType === 'Coach'"
+        >Formation<img src="../../assets/ta.png" style="width: 30px;"> </a
+      >
+      
+    </li> -->
+    <li><a
+      
+      routerLink="/homeCoach/MlCoach"
+      *ngIf="roleType == 'Coach'"
+      >Prediction Part<img src="../../assets/machine-learning.png" style="width: 30px;margin-left: 10px;"></a
+    >
+  
+  </li>
+  <li><a href="http://localhost:8501/" target="_blank"
+    >Prediction live<img src="../../assets/vivre.png" style="width: 40px;margin-left: 10px;"></a
+  >
+
+</li>
+  </ul>
+  <!-- logout Coach -->
+  <div style="margin-left: 20px;margin-top: 30%;">
+    <li>
+      <button
+        mat-button
+        [matMenuTriggerFor]="menu"
+        class="user mt-2 d-flex align-items-center"
+      >
+        <img src="../../assets/user.jpg" alt="" class="user-image mr-1 p-2" />
+
+        User
+        <mat-icon class="user-image-icon ml-1">keyboard_arrow_down</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="logout()">
+          <mat-icon>exit_to_app</mat-icon>
+          Logout
+        </button>
+      </mat-menu>
+    </li>
+  </div>
+  </ng-container>
+
+<ng-container *ngIf="roleType === 'Directeur'">
+  <ul>
+    <li><a
+      
+      routerLink="/homeDirecteur"
+      
+      >Internal Coach <img src="../../assets/entraineur-de-pokemon.png" style="width: 35px;margin-left: 10px;"></a
+    >
+  
+  </li>
+    <li><a
+      
+      routerLink="/homeDirecteur/ExternalCoach"
+      *ngIf="roleType === 'Directeur'"
+      >External Coach<img src="../../assets/entraineur-personnel.png" style="width: 35px;margin-left: 10px;"></a
+    >
+  </li>
+    <li><a
+      
+      routerLink="/homeDirecteur/SumOfExternalPlayer"
+      *ngIf="roleType === 'Directeur'"
+      >Top 10 Players <img src="../../assets/top-10.png" style="width: 35px;margin-left: 10px;"></a
+    ></li>
+    <li><a
+      
+      routerLink="/homeDirecteur/ValueOfMyPlayer"
+      *ngIf="roleType === 'Directeur'"
+      >Value of my player <img src="../../assets/valeur-de-la-maison (1).png" style="width: 35px;margin-left: 10px;"></a
+    ></li>
+    <li><a
+      
+      routerLink="/homeDirecteur/ValueOfExtrernalPlayer"
+      *ngIf="roleType === 'Directeur'"
+      > External player <img src="../../assets/valeur-de-la-maison.png" style="width: 35px;margin-left: 10px;"></a
+    ></li>
+    <li><a
+      
+      routerLink="/homeDirecteur/MlDirecteur"
+      *ngIf="roleType == 'Directeur'"
+      >Prediction Part <img src="../../assets/machine-learning.png" style="width: 35px;margin-left: 10px;"></a
+    ></li>
+    </ul>
+
+    <!-- logout for director -->
+    <div style="margin-left: 20px;margin-top:-20%;">
+      <li>
+        <button
+          mat-button
+          [matMenuTriggerFor]="menu"
+          class="user mt-2 d-flex align-items-center"
+        >
+          <img src="../../assets/user.jpg" alt="" class="user-image mr-1 p-2" />
+  
+          User
+          <mat-icon class="user-image-icon ml-1">keyboard_arrow_down</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="logout()">
+            <mat-icon>exit_to_app</mat-icon>
+            Logout
+          </button>
+        </mat-menu>
+      </li>
+    </div>
+  </ng-container>
+<ng-container *ngIf="roleType === 'StaffMedical'">
+<ul>
+
+    <li style="display: inline;">
+      
+      <a routerLink="/homeMedical" 
+        >Dashbord Medical  <img src="../../assets/equipe-medicale.png" style="width: 35px;margin-left: 10px;"></a
+      >
+    </li>
+    <li >
+      
+      <a   
+        routerLink="/homeMedical/MlMedical"
+        *ngIf="roleType == 'StaffMedical'"
+        >Prediction Part <img src="../../assets/machine-learning.png" style="width: 35px;margin-left: 10px;"></a
+      >
+    </li>
+    
+    </ul>
+    <!-- logout for midecal -->
+    <div style="margin-left: 20px;margin-top: 80%;">
+      <li>
+        <button
+          mat-button
+          [matMenuTriggerFor]="menu"
+          class="user mt-2 d-flex align-items-center"
+        >
+          <img src="../../assets/user.jpg" alt="" class="user-image mr-1 p-2" />
+  
+          User
+          <mat-icon class="user-image-icon ml-1">keyboard_arrow_down</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="logout()">
+            <mat-icon>exit_to_app</mat-icon>
+            Logout
+          </button>
+        </mat-menu>
+      </li>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="roleType === 'StaffPhysique'">
+  <ul>
+    <li>
+      <a routerLink="/homeprepphysique" 
+        >Fitness trainer <img src="../../assets/joueur-de-football.png" style="width: 40px;margin-left: 10px;"></a
+      >
+    </li>
+    <li>
+      <a routerLink="/homeprepphysique/ExternalFitness" *ngIf="roleType === 'StaffPhysique'"
+        >External fitness <img src="../../assets/fonctionnement.png" style="width: 30px;margin-left: 10px;"></a
+      >
+    </li>
+    
+    <li>
+      <a
+        
+        routerLink="/homeprepphysique/MlPrephysique"
+        *ngIf="roleType == 'StaffPhysique'"
+        >Prediction part <img src="../../assets/machine-learning.png" style="width: 30px;margin-left: 10px;"> </a
+      >
+    </li>
+  </ul>
+  <!-- logout staff physique -->
+  <div style="margin-left: 20px;margin-top: 60%;">
+    <li>
+      <button
+        mat-button
+        [matMenuTriggerFor]="menu"
+        class="user mt-2 d-flex align-items-center"
+      >
+        <img src="../../assets/user.jpg" alt="" class="user-image mr-1 p-2" />
+
+        User
+        <mat-icon class="user-image-icon ml-1">keyboard_arrow_down</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="logout()">
+          <mat-icon>exit_to_app</mat-icon>
+          Logout
+        </button>
+      </mat-menu>
+    </li>
+  </div>
+  </ng-container>
+    
+    
+  
+  
+
+</div>
+
+  
+</nav>
+
+<!-- main article -->
+<article style="width: 120vw; height: 100vh; margin-left: -130px; padding: 0">
+  <router-outlet></router-outlet>
+</article>
